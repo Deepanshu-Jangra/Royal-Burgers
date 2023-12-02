@@ -1,0 +1,67 @@
+@import "colors";
+
+.menuCard {
+  width: 30%;
+  background-color: $primary;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.495);
+  color: white;
+
+  > div {
+    border-radius: 20px 20px 0 0;
+    background-color: $yellow;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    height: 4rem;
+    // color: $yellow;
+    background-color: $primary;
+  }
+
+  > main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > img {
+      height: 15rem;
+      width: 100%;
+      object-fit: contain;
+    }
+    > h5 {
+      font-size: 1.8rem;
+    }
+    > p {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 1rem 0;
+    }
+    > button {
+      background-color: $yellow;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      padding: 1rem 2rem;
+      width: 100%;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+      &:hover {
+        transform: scale(1.04);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menuCard {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}

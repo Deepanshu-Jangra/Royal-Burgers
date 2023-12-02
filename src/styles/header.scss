@@ -1,0 +1,80 @@
+@import "colors";
+
+nav {
+  height: 5rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.229);
+  background-color: #010009;
+  color: white;
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    > .brandIcon {
+      margin: 0;
+      > svg {
+        color: $yellow;
+        font-size: 3rem;
+      }
+    }
+
+    > a {
+      margin: 0 2rem;
+      color: #efefef;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      border-bottom: 1.7px solid transparent;
+      &:hover {
+        color: $yellow;
+      }
+      &.active {
+        color: $yellow;
+        border-bottom: 1.7px solid $yellow;
+      }
+
+      > svg {
+        color: $yellow;
+        transition: inherit;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.bump {
+  animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  70% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    padding: 1rem;
+    > div > a {
+      margin: 0 0.5rem;
+    }
+  }
+}

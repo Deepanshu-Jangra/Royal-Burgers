@@ -1,0 +1,57 @@
+@import "colors";
+
+.cart {
+  background-color: #000;
+  width: 100%;
+  // min-height: 100vh;
+
+  > main {
+    height: 100%;
+    background-color: $primary;
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+    color: #eee;
+
+    > article {
+      padding: 2rem;
+
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem 0;
+
+        > p {
+          color: $yellow;
+        }
+      }
+
+      button {
+        background-color: $yellow;
+        color: black;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 2rem;
+        float: right;
+        border: none;
+        outline: none;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cart {
+    margin-bottom: none;
+    > main > article > a {
+      float: none;
+      display: block;
+      width: 100%;
+    }
+  }
+}

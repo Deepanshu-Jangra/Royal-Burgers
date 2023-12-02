@@ -1,0 +1,68 @@
+@import "colors";
+
+.home {
+  height: 100vh;
+  overflow-x: hidden;
+
+  > div {
+    padding-left: 8rem;
+    padding-top: 11rem;
+    color: white;
+    > div > svg {
+      color: $yellow;
+      font-size: 2.8rem;
+      margin-bottom: -1.4rem;
+    }
+    > h1 {
+      font-size: 4.5rem;
+      text-transform: uppercase;
+      color: $yellow;
+    }
+    > p {
+      font-size: 1.2rem;
+    }
+  }
+
+  > a {
+    margin: 2rem 8rem;
+    width: 10rem;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border: none;
+    font-size: 1.1rem;
+    padding: 1rem;
+    cursor: pointer;
+    display: block;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/hamburger.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0%;
+
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    > div {
+      text-align: center;
+      padding-top: 10rem;
+      padding-left: 0rem;
+      > svg {
+        display: none;
+      }
+    }
+
+    > a {
+      margin: 2rem auto;
+    }
+  }
+}

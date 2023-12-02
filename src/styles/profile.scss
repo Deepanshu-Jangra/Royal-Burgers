@@ -1,0 +1,65 @@
+@import "colors";
+
+.profile {
+  background-color: #000;
+  width: 100%;
+  // height: 100vh;
+
+  > main {
+    max-width: 900px;
+    height: 100%;
+    background-color: $primary;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+
+    > img {
+      width: 15rem;
+      height: 15rem;
+      border-radius: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.146);
+      margin: 3rem;
+      object-fit: cover;
+    }
+
+    > h5 {
+      font-size: 2rem;
+      font-family: "Roboto";
+      color: white;
+    }
+
+    > div {
+      margin-top: 1.5rem;
+
+      > a {
+        background-color: $yellow;
+        color: black;
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    > button {
+      margin-top: 1.5rem;
+      border: none;
+      outline: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      background-color: #fff;
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+  }
+}
