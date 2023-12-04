@@ -26,19 +26,12 @@ nav {
       margin: 0 2rem;
       color: #efefef;
       font-size: 1.1rem;
-      transition: all 0.3s;
-      border-bottom: 1.7px solid transparent;
-      &:hover {
-        color: $yellow;
-      }
+      &:hover,
       &.active {
         color: $yellow;
-        border-bottom: 1.7px solid $yellow;
       }
 
       > svg {
-        color: $yellow;
-        transition: inherit;
         font-size: 1.5rem;
       }
     }

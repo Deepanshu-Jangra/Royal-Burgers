@@ -41,13 +41,16 @@ const Header = () => {
         <NavLink to="/">Home</NavLink>
         <NavLink to="/contact">Contact</NavLink>
         <NavLink to="/about">About</NavLink>
-        <Link to="/cart" className={cartBumpClass}>
+        <NavLink to="/cart" activeClassName="active" className={cartBumpClass}>
           <FiShoppingCart />
-        </Link>
+        </NavLink>
 
-        <Link to={isAuthenticated ? "/me" : "/login"}>
+        <NavLink
+          to={isAuthenticated ? "/me" : "/login"}
+          activeClassName="active"
+        >
           {isAuthenticated ? <FaUser /> : <FiLogIn />}
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );
