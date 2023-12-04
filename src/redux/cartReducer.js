@@ -19,7 +19,7 @@ const initialState = {
   tax: 0,
   shippingCharges: 0,
   total: 0,
-  shippingInfo: {},
+  shippingInfo: null,
   paymentMethod: "",
 };
 
@@ -82,7 +82,7 @@ const cartReducer = createReducer(initialState, {
     state.tax = 0;
     state.shippingCharges = 0;
     state.total = 0;
-    state.shippingInfo = {};
+    state.shippingInfo = null;
     state.paymentMethod = "";
   },
 

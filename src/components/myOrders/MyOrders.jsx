@@ -1,12 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineEye } from "react-icons/ai";
 import { useSelector } from "react-redux";
 
 const MyOrders = () => {
+  const navigate = useNavigate();
   const { total, paymentMethod, orderId, totalQty } = useSelector(
     (state) => state.database.cart
   );
+  const { isOrdered } = useSelector((state) => state.database);
+
+  useEffect(() => {
+    if (!isOrdered) {
+      navigate("/confirmorder");
+    }
+  }, [isOrdered, navigate]);
 
   // const arr = [1, 2, 3, 4];
 
@@ -31,7 +39,7 @@ const MyOrders = () => {
               <td>{orderId}</td>
               <td>Processing</td>
               <td>{totalQty}</td>
-              <td>{total}</td>
+              <td>₹{total}</td>
               <td>{paymentMethod}</td>
               <td>
                 <Link to={`/order/${orderId}`}>

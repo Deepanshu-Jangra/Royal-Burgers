@@ -20,11 +20,13 @@ const initialState = {
     tax: 0,
     shippingCharges: 0,
     total: 0,
-    shippingInfo: {},
+    shippingInfo: null,
     paymentMethod: "",
     orderId: "",
     totalQty: 0,
   },
+
+  isOrdered: false,
 };
 
 const databaseReducer = createReducer(initialState, {
@@ -36,6 +38,10 @@ const databaseReducer = createReducer(initialState, {
       state.cart.cartItems.cheeseBurger.quantity +
       state.cart.cartItems.vegCheeseBurger.quantity +
       state.cart.cartItems.burgerWithFries.quantity;
+  },
+
+  setIsOrdered: (state, action) => {
+    state.isOrdered = true;
   },
 });
 

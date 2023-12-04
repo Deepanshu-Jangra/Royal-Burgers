@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -9,6 +10,7 @@ const ConfirmOrder = () => {
   const [payMethod, setPayMethod] = useState("");
   const [warningTxt, setWarningText] = useState("");
   const [isTouched, setIsTouched] = useState(false);
+
   const {
     cartItems,
     subTotal,
@@ -18,6 +20,12 @@ const ConfirmOrder = () => {
     shippingInfo,
     paymentMethod,
   } = useSelector((state) => state.cart);
+
+  useEffect(() => {
+    if (!shippingInfo) {
+      navigate("/shipping");
+    }
+  }, [shippingInfo, navigate]);
 
   const radioClickHandler = (e) => {
     setPayMethod(e.currentTarget.querySelector("input").value);
@@ -59,6 +67,7 @@ const ConfirmOrder = () => {
 
     toast.success("Order Placed Successfully!");
     navigate("/paymentsuccess");
+    dispatch({ type: "setIsOrdered" });
     dispatch({ type: "resetPaymentMethod" });
   };
 

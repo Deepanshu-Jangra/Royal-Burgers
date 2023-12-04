@@ -1,7 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 
 const PaymentSuccess = () => {
+  const navigate = useNavigate();
+  const { isOrdered } = useSelector((state) => state.database);
+
+  useEffect(() => {
+    if (!isOrdered) {
+      navigate("/confirmorder");
+    }
+  }, [isOrdered, navigate]);
+
   return (
     <section className="paymentSuccess">
       <main>

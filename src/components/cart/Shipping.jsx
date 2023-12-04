@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { State } from "country-state-city";
 import useInput from "../../hooks/use-input";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const isNotEmpty = (value) => value.trim() !== "";
 const isSixChar = (value) => value.length === 6;
@@ -11,6 +11,13 @@ const isPhoneNum = (value) => value.length === 10;
 const Shipping = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const { subTotal } = useSelector((state) => state.cart);
+
+  useEffect(() => {
+    if (subTotal === 0) {
+      navigate("/cart");
+    }
+  }, [subTotal, navigate]);
 
   const {
     value: enteredName,
