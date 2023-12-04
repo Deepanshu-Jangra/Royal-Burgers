@@ -42,28 +42,28 @@ import "./styles/orderDetails.scss";
 import "./styles/dashboard.scss";
 import "./styles/about.scss";
 
-function App() {
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path="/" element={<RootLayout />} errorElement={<NotFound />}>
-        <Route index element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/shipping" element={<Shipping />} />
-        <Route path="/confirmorder" element={<ConfirmOrder />} />
-        <Route path="/paymentsuccess" element={<PaymentSuccess />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/me" element={<Profile />} />
-        <Route path="/myorders" element={<MyOrders />} />
-        <Route path="/order/:id" element={<OrderDetails />} />
-        <Route path="/admin/dashboard" element={<Dashboard />} />
-        <Route path="/admin/users" element={<Users />} />
-        <Route path="/admin/orders" element={<Orders />} />
-        <Route path="/about" element={<About />} />
-      </Route>
-    )
-  );
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />} errorElement={<NotFound />}>
+      <Route index element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/shipping" element={<Shipping />} />
+      <Route path="/confirmorder" element={<ConfirmOrder />} />
+      <Route path="/paymentsuccess" element={<PaymentSuccess />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/me" element={<Profile />} />
+      <Route path="/myorders" element={<MyOrders />} />
+      <Route path="/order/:id" element={<OrderDetails />} />
+      <Route path="/admin/dashboard" element={<Dashboard />} />
+      <Route path="/admin/users" element={<Users />} />
+      <Route path="/admin/orders" element={<Orders />} />
+      <Route path="/about" element={<About />} />
+    </Route>
+  )
+);
 
+function App() {
   return (
     <>
       <RouterProvider router={router} />

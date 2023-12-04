@@ -13,6 +13,19 @@ const OrderDetails = () => {
     orderId,
   } = useSelector((state) => state.database.cart);
 
+  const today = new Date();
+  const month = today.getMonth() + 1;
+  const year = today.getFullYear();
+  const date = today.getDate();
+  const todayDate = `${date < 10 ? "0" + date : date}-${
+    month < 10 ? "0" + month : month
+  }-${year}`;
+
+  const codDate = new Date(new Date().setDate(date + 5)).getDate();
+  const deliverDate = `${codDate < 10 ? "0" + codDate : codDate}-${
+    month < 10 ? "0" + month : month
+  }-${year}`;
+
   return (
     <section className="orderDetails">
       <main>
@@ -47,11 +60,11 @@ const OrderDetails = () => {
           </p>
           <p>
             <b>Placed At-</b>
-            {"06-11-2023"}
+            {todayDate}
           </p>
           <p>
-            <b>Delivered At-</b>
-            {"06-11-2023"}
+            <b>Delivery Expected By-</b>
+            {deliverDate}
           </p>
         </div>
 
@@ -64,10 +77,13 @@ const OrderDetails = () => {
           <p>
             <b>Payment Reference-</b>#{orderId}
           </p>
-          <p>
-            <b>Paid At-</b>
-            {"06-11-2023"}
-          </p>
+
+          {paymentMethod === "Online" && (
+            <p>
+              <b>Paid At-</b>
+              {todayDate}
+            </p>
+          )}
         </div>
 
         <div>
