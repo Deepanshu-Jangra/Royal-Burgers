@@ -6,7 +6,6 @@ import burger1 from "../../assets/burger1.png";
 import burger2 from "../../assets/burger2.png";
 import burger3 from "../../assets/burger3.png";
 import toast from "react-hot-toast";
-// import { FiShoppingCart } from "react-icons/fi";
 import { FaCartShopping } from "react-icons/fa6";
 
 const Menu = () => {
