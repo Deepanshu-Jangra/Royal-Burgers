@@ -100,6 +100,10 @@ const cartReducer = createReducer(initialState, {
   addPaymentMethod: (state, action) => {
     state.paymentMethod = action.payload;
   },
+
+  resetPaymentMethod: (state, action) => {
+    state.paymentMethod = "";
+  },
 });
 
 export default cartReducer;

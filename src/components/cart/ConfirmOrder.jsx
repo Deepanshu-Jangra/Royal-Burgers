@@ -59,6 +59,7 @@ const ConfirmOrder = () => {
 
     toast.success("Order Placed Successfully!");
     navigate("/paymentsuccess");
+    dispatch({ type: "resetPaymentMethod" });
   };
 
   return (
