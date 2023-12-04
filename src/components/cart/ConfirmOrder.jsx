@@ -25,6 +25,7 @@ const ConfirmOrder = () => {
     if (!shippingInfo) {
       navigate("/shipping");
     }
+    window.scrollTo(0, 0);
   }, [shippingInfo, navigate]);
 
   const radioClickHandler = (e) => {

@@ -10,6 +10,7 @@ const PaymentSuccess = () => {
     if (!isOrdered) {
       navigate("/confirmorder");
     }
+    window.scrollTo(0, 0);
   }, [isOrdered, navigate]);
 
   return (

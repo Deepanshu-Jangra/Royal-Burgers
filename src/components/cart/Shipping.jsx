@@ -17,6 +17,7 @@ const Shipping = () => {
     if (subTotal === 0) {
       navigate("/cart");
     }
+    window.scrollTo(0, 0);
   }, [subTotal, navigate]);
 
   const {

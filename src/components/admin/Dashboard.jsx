@@ -4,12 +4,17 @@ import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, Tooltip, ArcElement, Legend } from "chart.js";
 import { motion } from "framer-motion";
 import Loader from "../layout/Loader";
+import { useEffect } from "react";
 
 ChartJS.register(Tooltip, ArcElement, Legend);
 
 const loading = false;
 
 const Dashboard = () => {
+  useEffect(() => {
+    window.scrollTo(0, 230);
+  }, []);
+
   const data = {
     labels: ["Preparing", "Shipped", "Delivered"],
     datasets: [

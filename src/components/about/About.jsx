@@ -21,7 +21,7 @@ const About = () => {
             menu
           </p>
 
-          <Link to="/">
+          <Link to="/" onClick={() => window.scrollTo(0, 0)}>
             <RiFindReplaceLine />
           </Link>
         </article>
