@@ -19,13 +19,25 @@ const Footer = () => {
 
       <aside>
         <h4>Follow Us</h4>
-        <a href="http://github.com/Deepanshu-Jangra">
+        <a
+          href="http://github.com/Deepanshu-Jangra"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <AiFillGithub />
         </a>
-        <a href="http://linkedin.com/in/deepanshu-jangra-392308291">
+        <a
+          href="http://linkedin.com/in/deepanshu-jangra-392308291"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <AiFillLinkedin />
         </a>
-        <a href="http://instagram.com/deepanshujangra_">
+        <a
+          href="http://instagram.com/deepanshujangra_"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <AiFillInstagram />
         </a>
       </aside>
