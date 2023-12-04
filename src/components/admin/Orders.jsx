@@ -16,6 +16,7 @@ const Orders = () => {
     if (!isOrdered) {
       navigate(isAuthenticated ? "/me" : "/");
     }
+    window.scrollTo(0, 0);
   }, [isOrdered, navigate, isAuthenticated]);
 
   // const arr = [1, 2, 3, 4];

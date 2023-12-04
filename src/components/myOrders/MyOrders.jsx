@@ -14,6 +14,7 @@ const MyOrders = () => {
     if (!isOrdered) {
       navigate("/confirmorder");
     }
+    window.scrollTo(0, 0);
   }, [isOrdered, navigate]);
 
   // const arr = [1, 2, 3, 4];

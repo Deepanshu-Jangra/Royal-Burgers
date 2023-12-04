@@ -1,7 +1,12 @@
 import React from "react";
 import me from "../../assets/founder.jpg";
+import { useEffect } from "react";
 
 const Users = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const arr = [1, 2, 3, 4];
 
   return (
