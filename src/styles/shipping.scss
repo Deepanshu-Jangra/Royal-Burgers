@@ -97,10 +97,15 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .shipping > main > form {
-    > div {
+    > .control {
       width: 100%;
+      padding: 0 0.5rem;
+      flex-direction: column;
+      > label {
+        align-self: flex-start;
+      }
 
       > input,
       > select {

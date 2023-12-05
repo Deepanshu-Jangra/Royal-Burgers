@@ -64,5 +64,9 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 2px;
+
+    > p {
+      margin-left: 5px;
+    }
   }
 }

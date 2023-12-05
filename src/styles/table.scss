@@ -49,7 +49,6 @@
       }
 
       td {
-        color: #555;
         color: white;
 
         > img {
@@ -69,5 +68,11 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tableClass > main {
+    padding: 0.6rem;
   }
 }

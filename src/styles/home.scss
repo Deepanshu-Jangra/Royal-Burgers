@@ -56,8 +56,12 @@
       text-align: center;
       padding-top: 10rem;
       padding-left: 0rem;
-      > svg {
+      > div > svg {
         display: none;
+      }
+
+      > p {
+        margin-top: 0.5rem;
       }
     }
 

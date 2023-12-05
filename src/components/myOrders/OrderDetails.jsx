@@ -132,7 +132,7 @@ const OrderDetails = () => {
                 fontWeight: 800,
               }}
             >
-              Sub Total
+              Subtotal
             </h4>
             <div
               style={{
@@ -148,7 +148,7 @@ const OrderDetails = () => {
                 fontWeight: 800,
               }}
             >
-              Total (ShippingCharges + Tax)
+              Total
             </h4>
             <div
               style={{
