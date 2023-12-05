@@ -54,16 +54,16 @@
       }
     }
 
-    textarea {
-      scrollbar-width: thin;
-      &::-webkit-scrollbar {
-        width: 5px;
-      }
-      &::-webkit-scrollbar-thumb {
-        background-color: #bbb;
-        border-radius: 1rem;
-      }
-    }
+    // textarea {
+    //   scrollbar-width: thin;
+    //   &::-webkit-scrollbar {
+    //     width: 5px;
+    //   }
+    //   &::-webkit-scrollbar-thumb {
+    //     background-color: #bbb;
+    //     border-radius: 1rem;
+    //   }
+    // }
 
     > .invalid {
       border-color: $warning;
