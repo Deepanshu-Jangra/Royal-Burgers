@@ -57,7 +57,7 @@
       padding-top: 10rem;
       padding-left: 0rem;
       > div > svg {
-        display: none;
+        margin-right: 11.7rem;
       }
 
       > p {
@@ -68,5 +68,11 @@
     > a {
       margin: 2rem auto;
     }
+  }
+}
+
+@media screen and (min-width: 581px) and (max-width: 600px) {
+  .home > div > div > svg {
+    margin-right: 33.5rem;
   }
 }
